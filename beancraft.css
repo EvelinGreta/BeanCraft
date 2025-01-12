@@ -1,0 +1,833 @@
+/*PAGES*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: var(--primary-background);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.mainContainer{
+    margin-top: 120px;
+    margin-bottom: 150px;
+    width: 70%;
+    padding: 20px;
+    background: var(--maincontainer);
+    border-radius: 10px; /*Makes corners rounded*/
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer{
+    text-align: center;
+    font-size: 14px;
+    background-color: black;
+    color: rgb(236, 231, 231);
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid rgb(204, 204, 204);
+}
+
+/*DARK/LIGHT MODE ---- To adjust colour from dark to light mode*/
+:root{
+    --primary-background: url("images/background.jpg");
+    --maincontainer:rgba(255, 255, 255, 0.9);
+    --maincol1:rgba(85,85,85); /*colour was not changed, but included for easier future adjustments*/
+    --maincol2:rgba(68,68,68);
+    --maincol3:rgba(51,51,51);
+    --contact-button-background: rgb(122, 194, 103);
+    --contact-button:white;
+    --contact-button-background-hover:rgb(56, 133, 37);
+    --contact-inputfield: white;
+    --filter-color: rgb(113, 113, 113);
+    --calendar-color: rgba(249, 249, 249, 0.71);
+    --calendar-cubes: rgb(255, 255, 255);
+    --calendar-cubes-hover: rgb(255, 220, 181);
+    --calendar-cubes-selected: rgb(207, 115, 2);
+    --calendar-cube-number:rgb(85, 85, 85);
+    --calendar-h1: rgb(33, 33, 33);
+    --bean-info-container: rgb(255, 255, 255);
+    --bean-cal-name:rgb(68, 68, 68);
+    --bean-cal-p:rgb(85, 85, 85);
+    --bean-cal-p-str:rgb(51, 51, 51);
+    --bean-of-the-day:rgb(255, 255, 255);
+    --bean-of-the-day-h2:rgb(44, 62, 80);
+    --bean-of-the-day-p:rgb(127, 140, 141);
+    --bean-of-the-day-button:rgb(164, 84, 26);
+    --bean-of-the-day-button-hover:rgb(218, 111, 35);
+    --dropdown-items:black;
+    --selection-heading:rgb(0, 0, 0);
+    --selection-text:rgb(141, 54, 0);
+    --modal-color: white;
+    --selection-popup-heading:black;
+    --selection-popup-text:black;
+    --x-button: black;
+}
+
+.dark_theme{
+    --primary-background: url("images/Background\ dark\ 4.jpg");
+    --maincontainer:rgba(209, 180, 148, 0.978);
+    --maincol1:rgba(85,85,85);
+    --maincol2:rgba(68,68,68);
+    --maincol3:rgba(51,51,51);
+    --contact-button-background:rgb(134, 85, 29);
+    --contact-button:rgb(33, 33, 33);
+    --contact-button-background-hover:rgb(177, 113, 39);
+    --contact-inputfield: rgba(213, 213, 213, 0);
+    --filter-color:rgb(227, 227, 227);
+    --calendar-color:rgba(52, 52, 52, 0.589);
+    --calendar-cubes:rgb(97, 97, 97);
+    --calendar-cubes-hover: rgb(233, 172, 102);
+    --calendar-cubes-selected: rgb(164, 92, 3);
+    --calendar-cube-number:rgb(255, 255, 255);
+    --calendar-h1: rgb(236, 236, 236);
+    --bean-info-container: rgb(97, 97, 97);
+    --bean-cal-name:rgb(240, 240, 240);
+    --bean-cal-p:rgb(225, 225, 225);
+    --bean-cal-p-str:rgb(255, 255, 255);
+    --bean-of-the-day:rgb(246, 246, 246);
+    --bean-of-the-day-h2:rgb(44, 62, 80);
+    --bean-of-the-day-p:rgb(127, 140, 141);
+    --bean-of-the-day-button:rgb(164, 84, 26);
+    --bean-of-the-day-button-hover:rgb(218, 111, 35);
+    --dropdown-items:rgb(244, 244, 244);
+    --selection-heading:rgb(30, 30, 30);
+    --selection-text:rgb(30, 30, 30);
+    --modal-color: rgb(33, 33, 33);
+    --selection-popup-heading:rgb(213, 213, 213);
+    --selection-popup-text:rgb(213, 213, 213);
+    --x-button: white;
+} 
+
+
+/*NAVBAR*/
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: auto;
+    margin: 0 auto;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(103, 103, 114);
+    background-size: 100% 100%;
+    background: rgba(0, 0, 0, 0.46);
+    z-index: 10;
+    top: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.navbar a{
+    color: rgb(196, 195, 195);
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: flex;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover{
+    color: rgb(230, 226, 226);
+}
+
+.navbar .links{
+    font-size: 20px;
+    display: flex;
+    gap: 10%;
+    margin-left: 120px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .links a:hover{
+    background-color: rgb(82, 82, 82);
+    color: rgb(218, 111, 35);
+}
+
+.navbar .logo{
+    display: inline;
+    width: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 40px;
+    background: none;
+}
+
+.navbar .logo:hover{
+    transform: scale(1.05);
+}
+
+.navbar .toggle_btn{
+    color: var(--filter-color);
+    font-size: 30px;
+    cursor: grab;
+    display: none;
+}
+
+.navbar #icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+.navbar #icon:hover{
+    transform: scale(1.10);
+}
+
+nav ul{
+    flex: 1;
+    text-align: center;
+}
+
+.icon_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+
+/*DROPDOWN MENU*/
+.dropdown_menu{
+    text-decoration: none;
+    display: none;
+    position: absolute;
+    right: 32px;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu li{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu li a{
+    color: var(--dropdown-items);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown_menu li a:hover{
+    color: rgb(218, 111, 35);
+}
+
+.dropdown_menu.open{
+    height: 150px;
+}
+
+@media(max-width: 1250px){
+    .navbar .links{
+        display:none
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+        position: fixed;
+        width: 45%;
+    }
+
+    .navbar #icon{
+        position: absolute;
+        right: 20px;
+        margin-right: 30px;
+        top: 15px;
+        transform: none;
+    }
+}
+
+@media(max-width: 600px){
+    .dropdown_menu{
+        left: 32px;
+        width: unset;
+        display: block;
+        position: fixed;
+    }
+
+    .navbar #icon{
+        position: absolute;
+        right: 20px;
+        margin-right: 30px;
+        top: 15px;
+        transform: none;
+    }
+}
+
+
+/*HOME*/
+.introHome{
+    text-align: center;
+    margin-top: 50px;
+    padding: 48px 16px;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.introHome h1{
+    font-size: 56px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.introHome h2{
+    font-size: 24px;
+    margin-bottom: 32px;
+    font-style: italic;
+    text-align: center;
+}
+
+.introHome img{
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#checkOut{
+    margin-top: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(5, 5, 5);
+    margin-bottom: 10px;
+}
+
+#arrow{
+    font-size: 80px; /* Adjust the size of the arrow */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+.bean_of_the_day{ /* Bean of the Day section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    background-color: var(--bean-of-the-day);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+#bean_title{
+    margin-bottom: 25px;
+}
+
+#bean_info{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+#bean_image{
+    border-radius: 10px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#bean_name{
+    font-size: 32px;
+    color: var(--bean-of-the-day-h2);
+    margin-bottom: 16px;
+}
+
+#bean_details p{
+    font-size: 19px;
+    color: var(--bean-of-the-day-p);
+}
+
+#calendarButton{
+    background-color: var(--bean-of-the-day-button);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    font-size: 19px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#calendarButton:hover{
+    background-color: var(--bean-of-the-day-button-hover);
+}
+
+@media (max-width: 600px){
+    .introHome h1{
+        font-size: 40px;
+    }
+
+    .introHome h2{
+        font-size: 19px;
+    }
+
+    #bean-of-the-day{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bean_info{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bean_details h2{
+        text-align: center;
+    }
+}
+
+
+/*ABOUT*/
+#headingabout_first{
+    text-align: center;
+    font-size: 40px;
+    color: var(--maincol3);
+    margin-bottom: 10px;
+}
+
+.mainContainer p{
+    text-align: center;
+    font-size: 19px;
+    color: var(--maincol1);
+    margin-bottom: 20px;
+}
+
+.maintext h2, section h2{
+    font-size: 28px;
+    color: var(--maincol2);
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgb(204, 204, 204); /* To create an underline effect*/
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.maintext p, section p{
+    font-size: 16px;
+    color: var(--maincol2);
+    line-height: 1.6; /* To help with spacing on the text line */
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.aboutList{
+    padding-left: 20px; /* To indent lists slightly */
+    margin-bottom: 20px;
+}
+
+.aboutList li{
+    font-size: 16px;
+    color: var(--maincol2);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.aboutList li #listTitle{
+    color: var(--maincol3);
+}
+
+@media(max-width: 1250px){
+    .mainContainer{
+        width: 90%;
+    }
+}
+
+@media(max-width: 600px){
+    .maintext{
+        margin: 20px 20px 20px 20px;
+    }}
+
+
+/*CONTACT*/
+.contact_container{
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: var(--maincontainer);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#Contact{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--maincol3);
+}
+
+.contact_info{
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.contact_info p{
+    margin-bottom: 10px;
+    color: var(--maincol2);
+}
+
+.contact_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_form label{
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--maincol2);
+}
+
+.contact_form input,
+.contact_form textarea{
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--contact-inputfield);
+}
+
+.contact_form input:focus,
+.contact_form textarea:focus{
+    outline: none;
+    border-color: rgb(119, 119, 119);
+}
+
+#submit{
+    padding: 12px 20px;
+    font-size: 18px;
+    color: var(--contact-button);
+    background-color:var(--contact-button-background);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover{
+    background-color: var(--contact-button-background-hover);
+}
+
+
+/*SUBMIT*/
+.submit_container{
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: var(--maincontainer);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color:var(--submit-text1);
+}
+
+#Thank_you{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--maincol3);
+}
+
+#in_touch{
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+#backtohome{
+    display: inline-block;
+    margin: 30px auto;
+    color: var(--maincol3);
+    text-decoration: none;
+}
+
+#backtohome:hover{
+    color: rgb(187, 129, 62);
+}
+
+.backcontainer{ /*Align back to home button to center*/
+    text-align: center;
+}
+
+
+/*SELECTION*/
+#headingcoffee_first{
+    font-size: 40px;
+    color: var(--selection-heading);
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    margin-bottom: 60px;
+}
+
+.grid_container{
+    display: grid;
+    color: var(--selection-text);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-bottom: 40px;
+}
+
+.coffee_item{
+    text-align: center;
+}
+
+.coffee_item img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.coffee_item img:hover{
+    scale: 1.05;
+}
+
+.coffee_item h1{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--selection-text);
+    font-weight: bold;
+}
+
+.coffee_item p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--selection-popup-text);
+    text-align: left;
+}
+
+.coffee_item #price{
+    font-weight: normal;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: var(--modal-color);
+    width: 800px;
+    max-width: 80%;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+.modal_header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal_header .title{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--selection-popup-heading);
+}
+
+.modal_header .close_button{
+    color: var(--x-button);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.open_Button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.modal_body{
+    padding: 10px 15px;
+}
+
+#overlay{
+    position: fixed;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+@media(max-width: 1000px){
+    .grid_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mainContainerteas{
+        width: 90%;
+    }
+}
+
+@media(max-width: 650px){
+    .grid_container{
+        grid-template-columns: 1fr;
+    }
+    .mainContainerteas{
+        width: 90%;
+    }
+}
+
+
+/*CALENDAR*/
+.calcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 100px auto; /*For centering and more space top and bottom*/
+    padding: 20px; /*Extra spacing on all sides*/
+    max-width: 900px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 8px; /*Rounded corners*/
+    background-color: var(--calendar-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calcontainer h1{
+    margin-top: 20px; /* Adjusts space between the title and the calendar */
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--calendar-h1);
+}
+
+#calendar{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    width: 100%; /*Makes it full width*/
+    max-width: 800px;
+}
+
+#calendar div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 4px;
+    padding: 10px;
+    background-color:var(--calendar-cubes);
+    font-size: 16px;
+    color: var(--calendar-cube-number);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#calendar div:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--calendar-cubes-hover);
+}
+
+#calendar div.selected{ /*Style the selected day*/
+    background-color: var(--calendar-cubes-selected);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.bean_info_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 8px;
+    background-color: var(--bean-info-container);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#cal_bean_info{
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#cal_bean_info.show{
+    display: block;
+    opacity: 1;
+}
+
+#cal_bean_name{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--bean-cal-name);
+}
+
+#cal_bean_image{
+    border-radius: 4px;
+    height: auto;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.bean_info_container p{
+    margin: 5px 0;
+    color: var(--bean-cal-p);
+    font-size: 16px;
+    text-align: left
+}
+
+.bean_info_container p strong{
+    font-weight: bold;
+    color: var(--bean-cal-p-str);
+}

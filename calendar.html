@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanCraft</title>
+    <link rel="stylesheet" href="beancraft.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="images/Beanicon.jpg">
+    <script defer src="beancraft.js"></script>
+</head>
+<body>
+        <header>
+        <nav class="navbar">
+            <a href="home.html" class="logo"> BeanCraft </a>
+            <ul class="links"> 
+                <li> <a href="about.html"> About Us </a> </li>
+                <li> <a href="selection.html"> Our Coffee </a> </li>
+                <li> <a href="contact.html"> Contact </a> </li>
+            </ul>
+            <div class="icon_wrapper">
+                <img id="icon"  src="images/moon.png">
+            </div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-filter"></i>
+            </div>
+        </nav>
+        <div class="dropdown_menu">
+            <li> <a href="about.html"> About Us </a> </li>
+            <li> <a href="selection.html"> Our Coffee </a> </li>
+            <li> <a href="contact.html"> Contact </a> </li>
+        </div>
+    </header>
+    <main>
+        <div class="calcontainer"> <!-- Populated with JavaScript -->
+            <h1>Bean of the Day Calendar</h1>
+            <div id="calendar"></div>
+            <div id="cal_bean_info" class="bean_info_container">
+                <h2 id="cal_bean_name">Select a day to see the Bean of the Day</h2>
+                <img id="cal_bean_image" src="" alt="Bean Image">
+                <p><strong>Cost per 100g:</strong> <span id="cal_bean_cost"></span></p>
+                <p><strong>Aroma:</strong> <span id="cal_bean_aroma"></span></p>
+                <p><strong>Color:</strong> <span id="cal_bean_color"></span></p>
+                <p><strong>Description:</strong> <span id="cal_bean_description"></span></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

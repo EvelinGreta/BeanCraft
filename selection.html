@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanCraft</title>
+    <link rel="stylesheet" href="beancraft.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="images/Beanicon.jpg">
+    <script defer src="beancraft.js"></script>
+</head>
+<body>
+        <header>
+        <nav class="navbar">
+            <a href="home.html" class="logo"> BeanCraft </a>
+            <ul class="links"> 
+                <li> <a href="about.html"> About Us </a> </li>
+                <li> <a href="selection.html"> Our Coffee </a> </li>
+                <li> <a href="contact.html"> Contact </a> </li>
+            </ul>
+            <div class="icon_wrapper">
+                <img id="icon"  src="images/moon.png">
+            </div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-filter"></i>
+            </div>
+        </nav>
+        <div class="dropdown_menu">
+            <li> <a href="about.html"> About Us </a> </li>
+            <li> <a href="selection.html"> Our Coffee </a> </li>
+            <li> <a href="contact.html"> Contact </a> </li>
+    </div>
+    </header>
+    <main>
+        <div class="mainContainer">
+            <h1 id="headingcoffee_first"> Our Selection </h1>
+            <div class="grid_container">
+                <div class="coffee_item">
+                    <button class="open_Button" data-modal-target="#modal1"><img src="images/brazilian-santos.jpg" alt="Brazilian Santos"></button>
+                    <h1>Brazilian Santos</h1>
+                    <div class="modal" id="modal1">
+                        <div class="modal_header">
+                            <div class="title"> Brazilian Santos </div>
+                            <button data-close-button class="close_button">&times;</button>
+                        </div>
+                        <div class="modal_body">
+                            <p> Cost per 100g: £4.99 </p>
+                            <p> Aroma: Nutty with chocolate undertones </p>
+                            <p> Color: Golden brown </p>
+                            <p> Description: A smooth, well-balanced coffee with notes of nuts and chocolate. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee_item">
+                    <button class="open_Button" data-modal-target="#modal2"><img src="images/colombian-supreme.jpg" alt="Colombian Supreme"></button>
+                    <h1>Colombian Supreme</h1>
+                    <div class="modal" id="modal2">
+                        <div class="modal_header">
+                            <div class="title"> Colombian Supreme </div>
+                            <button data-close-button class="close_button">&times;</button>
+                        </div>
+                        <div class="modal_body">
+                            <p> Cost per 100g: £6.49 </p>
+                            <p> Aroma: Fruity and vibrant </p>
+                            <p> Color: Medium brown </p>
+                            <p> Description: A premium coffee with a tangy kick. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee_item">
+                    <button class="open_Button" data-modal-target="#modal3"><img src="images/costa-rican-tarrazu.jpg" alt="Costa Rican Tarrazu"></button>
+                    <h1>Costa Rican Tarrazu</h1>
+                    <div class="modal" id="modal3">
+                        <div class="modal_header">
+                            <div class="title"> Costa Rican Tarrazu </div>
+                            <button data-close-button class="close_button">&times;</button>
+                        </div>
+                        <div class="modal_body">
+                            <p> Cost per 100g: £6.29 </p>
+                            <p> Aroma: Nutty with a touch of caramel </p>
+                            <p> Color: Golden brown </p>
+                            <p> Description: A well-rounded coffee with smooth caramel and nutty notes. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee_item">
+                    <button class="open_Button" data-modal-target="#modal4"><img src="images/espresso-blend.jpg" alt="Espresso Blend"></button>
+                    <h1>Espresso Blend</h1>
+                    <div class="modal" id="modal4">
+                        <div class="modal_header">
+                            <div class="title"> Espresso Blend </div>
+                            <button data-close-button class="close_button">&times;</button>
+                        </div>
+                        <div class="modal_body">
+                            <p> Cost per 100g: £5.99 </p>
+                            <p> Aroma: Rich and bold </p>
+                            <p> Color: Dark brown </p>
+                            <p> Description: A perfect blend for espresso lovers. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee_item">
+                    <button class="open_Button" data-modal-target="#modal5"><img src="images/ethiopian-yirgacheffe.jpg" alt="Ethiopian Yirgacheffe"></button>
+                    <h1>Ethiopian Yirgacheffe</h1>
+                    <div class="modal" id="modal5">
+                        <div class="modal_header">
+                            <div class="title"> Ethiopian Yirgacheffe </div>
+                            <button data-close-button class="close_button">&times;</button>
+                        </div>
+                        <div class="modal_body">
+                            <p> Cost per 100g: £7.19 </p>
+                            <p> Aroma: Floral and citrusy </p>
+                            <p> Color: Light brown </p>
+                            <p> Description: A bright and lively coffee with floral and citrus notes. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee_item">
+                    <button class="open_Button" data-modal-target="#modal6"><img src="images/guatemalan-antigua.jpg" alt="Guatemalan Antigua"></button>
+                    <h1>Guatemalan Antigua</h1>
+                    <div class="modal" id="modal6">
+                        <div class="modal_header">
+                            <div class="title"> Guatemalan Antigua </div>
+                            <button data-close-button class="close_button">&times;</button>
+                        </div>
+                        <div class="modal_body">
+                            <p> Cost per 100g: £7.59 </p>
+                            <p> Aroma: Smoky with hints of spice </p>
+                            <p> Color: Medium brown </p>
+                            <p> Description: A complex coffee with smoky flavors and a touch of spice. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee_item">
+                    <button class="open_Button" data-modal-target="#modal7"><img src="images/jamaican-blue-mountain.jpg" alt="Jamaican Blue Mountain"></button>
+                    <h1>Jamaican Blue Mountain</h1>
+                    <div class="modal" id="modal7">
+                        <div class="modal_header">
+                            <div class="title"> Jamaican Blue Mountain </div>
+                            <button data-close-button class="close_button">&times;</button>
+                        </div>
+                        <div class="modal_body">
+                            <p> Cost per 100g: £25 </p>
+                            <p> Aroma: Smooth and mild </p>
+                            <p> Color: Medium brown </p>
+                            <p> Description: One of the most prestigious coffees, known for its smooth, mild flavor. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee_item">
+                    <button class="open_Button" data-modal-target="#modal8"><img src="images/kenyan-aa.jpg" alt="Kenyan AA"></button>
+                    <h1>Kenyan AA</h1>
+                    <div class="modal" id="modal8">
+                        <div class="modal_header">
+                            <div class="title"> Kenyan AA </div>
+                            <button data-close-button class="close_button">&times;</button>
+                        </div>
+                        <div class="modal_body">
+                            <p> Cost per 100g: £8.49 </p>
+                            <p> Aroma: Bright and berry-like </p>
+                            <p> Color: Dark brown </p>
+                            <p> Description: A vibrant coffee with bold berry flavors and a hint of wine. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee_item">
+                    <button class="open_Button" data-modal-target="#modal9"><img src="images/sumatra-mandheling.jpg" alt="Sumatra Mandheling"></button>
+                    <h1> Sumatra Mandheling </h1>
+                    <div class="modal" id="modal9">
+                        <div class="modal_header">
+                            <div class="title"> Sumatra Mandheling </div>
+                            <button data-close-button class="close_button">&times;</button>
+                        </div>
+                        <div class="modal_body">
+                            <p> Cost per 100g: £6.89 </p>
+                            <p> Aroma: Earthy and spicy </p>
+                            <p> Color: Dark brown </p>
+                            <p> Description: A rich, full-bodied coffee with earthy and spicy characteristics. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="coffee_item">
+                    <button class="open_Button" data-modal-target="#modal10"><img src="images/tanzanian-peaberry.jpg" alt="Tanzanian Peaberry"></button>
+                    <h1>Tanzanian Peaberry</h1>
+                    <div class="modal" id="modal10">
+                        <div class="modal_header">
+                            <div class="title"> Tanzanian Peaberry </div>
+                            <button data-close-button class="close_button">&times;</button>
+                        </div>
+                        <div class="modal_body">
+                            <p> Cost per 100g: £7.99 </p>
+                            <p> Aroma: Citrusy with a smooth finish </p>
+                            <p> Color: Dark brown </p>
+                            <p> Description: A unique peaberry coffee with bright citrus notes and a smooth finish. </p>
+                        </div>
+                    </div>
+                </div>
+    </main>
+    <footer>
+        <p>© 2025 BeanCraft. All Rights Reserved.</p>
+    </footer>
+    <div id="overlay"></div>
+</body>
+</html>

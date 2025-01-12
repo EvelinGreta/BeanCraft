@@ -1,0 +1,92 @@
+[
+  {
+    "dates": ["2025-01-01","2025-01-11", "2025-01-21", "2025-01-31"],
+    "name": "Espresso Blend",
+    "cost_per_100g": 5.99,
+    "aroma": "Rich and bold",
+    "color": "Dark brown",
+    "description": "A perfect blend for espresso lovers.",
+    "image": "images/espresso-blend.jpg"
+  },
+  {
+    "dates": ["2025-01-02","2025-01-12", "2025-01-22"],
+    "name": "Colombian Supreme",
+    "cost_per_100g": 6.49,
+    "aroma": "Fruity and vibrant",
+    "color": "Medium brown",
+    "description": "A premium coffee with a tangy kick.",
+    "image": "images/colombian-supreme.jpg"
+  },
+  {
+    "dates": ["2025-01-03","2025-01-13", "2025-01-23"],
+    "name": "Brazilian Santos",
+    "cost_per_100g": 4.99,
+    "aroma": "Nutty with chocolate undertones",
+    "color": "Golden brown",
+    "description": "A smooth, well-balanced coffee with notes of nuts and chocolate.",
+    "image": "images/brazilian-santos.jpg"
+  },
+  {
+    "dates": ["2025-01-04","2025-01-14", "2025-01-24"],
+    "name": "Ethiopian Yirgacheffe",
+    "cost_per_100g": 7.19,
+    "aroma": "Floral and citrusy",
+    "color": "Light brown",
+    "description": "A bright and lively coffee with floral and citrus notes.",
+    "image": "images/ethiopian-yirgacheffe.jpg"
+  },
+  {
+    "dates": ["2025-01-05","2025-01-15", "2025-01-25"],
+    "name": "Sumatra Mandheling",
+    "cost_per_100g": 6.89,
+    "aroma": "Earthy and spicy",
+    "color": "Dark brown",
+    "description": "A rich, full-bodied coffee with earthy and spicy characteristics.",
+    "image": "images/sumatra-mandheling.jpg"
+  },
+  {
+    "dates": ["2025-01-06","2025-01-16", "2025-01-26"],
+    "name": "Jamaican Blue Mountain",
+    "cost_per_100g": 25.00,
+    "aroma": "Smooth and mild",
+    "color": "Medium brown",
+    "description": "One of the most prestigious coffees, known for its smooth, mild flavor.",
+    "image": "images/jamaican-blue-mountain.jpg"
+  },
+  {
+    "dates": ["2025-01-07","2025-01-17", "2025-01-27"],
+    "name": "Kenyan AA",
+    "cost_per_100g": 8.49,
+    "aroma": "Bright and berry-like",
+    "color": "Dark brown",
+    "description": "A vibrant coffee with bold berry flavors and a hint of wine.",
+    "image": "images/kenyan-aa.jpg"
+  },
+  {
+    "dates": ["2025-01-08","2025-01-18", "2025-01-28"],
+    "name": "Guatemalan Antigua",
+    "cost_per_100g": 7.59,
+    "aroma": "Smoky with hints of spice",
+    "color": "Medium brown",
+    "description": "A complex coffee with smoky flavors and a touch of spice.",
+    "image": "images/guatemalan-antigua.jpg"
+  },
+  {
+    "dates": ["2025-01-09","2025-01-19", "2025-01-29"],
+    "name": "Costa Rican Tarrazu",
+    "cost_per_100g": 6.29,
+    "aroma": "Nutty with a touch of caramel",
+    "color": "Golden brown",
+    "description": "A well-rounded coffee with smooth caramel and nutty notes.",
+    "image": "images/costa-rican-tarrazu.jpg"
+  },
+  {
+    "dates": ["2025-01-10","2025-01-20", "2025-01-30"],
+    "name": "Tanzanian Peaberry",
+    "cost_per_100g": 7.99,
+    "aroma": "Citrusy with a smooth finish",
+    "color": "Dark brown",
+    "description": "A unique peaberry coffee with bright citrus notes and a smooth finish.",
+    "image": "images/tanzanian-peaberry.jpg"
+  }
+]

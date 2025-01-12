@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanCraft</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="beancraft.css" type="text/css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/Beanicon.jpg">
+    <!-- External JavaScript -->
+    <script defer src="beancraft.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar"> <!-- Navigation Bar -->
+            <a href="home.html" class="logo"> BeanCraft </a>
+            <ul class="links"> 
+                <li> <a href="about.html"> About Us </a> </li>
+                <li> <a href="selection.html"> Our Coffee </a> </li>
+                <li> <a href="contact.html"> Contact </a> </li>
+            </ul>
+            <div class="icon_wrapper"> <!-- Icon for light/dark mode -->
+                <img id="icon"  src="images/moon.png">
+            </div>
+            <div class="toggle_btn"> <!-- Toggle button for dropdown menu -->
+                <i class="fa-solid fa-filter"></i>
+            </div>
+        </nav>
+        <div class="dropdown_menu"> <!-- Dropdown navigation bar -->
+            <li> <a href="about.html"> About Us </a> </li>
+            <li> <a href="selection.html"> Our Coffee </a> </li>
+            <li> <a href="contact.html"> Contact </a> </li>
+        </div>
+    </header>
+    <main>
+        <div class="mainContainer">
+            <section class="introHome">
+                <h1>Welcome to BeanCraft</h1>
+                <h2>Crafted with passion, brewed to perfection.</h2>
+                <img id="store" alt="Image of the Store" src="images/store.jpg">
+                <br>
+                <p id="checkOut"> Check out our Bean of the Day! </p>
+                <p id="arrow"> &darr; </p>
+            </section>
+
+        <div class="bean_of_the_day"> <!-- Bean of the Day section - dynamically populated with JavaScript and JSON file data -->
+            <h1 id="bean_title">Bean of the Day</h1>
+            <div id="bean_info">
+                <img id="bean_image" alt="Bean Image" />
+                <div id="bean_details">
+                    <h2 id="bean_name"></h2>
+                    <p id="bean_cost"></p>
+                    <p id="bean_aroma"></p>
+                    <p id="bean_color"></p>
+                    <p id="bean_description"></p>
+                </div>
+            </div>
+            <a href="calendar.html"><button id="calendarButton">View Calendar</button></a>
+        </div>
+        </div>
+        </main>
+        <footer>
+            <p>© 2025 BeanCraft. All Rights Reserved.</p>
+        </footer>
+</body>
+</html>

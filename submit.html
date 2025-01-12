@@ -1,0 +1,49 @@
+<!-- This page displays a thank you message to the user after submitting a contact form-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeanCraft</title>
+    <link rel="stylesheet" href="beancraft.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="images/Beanicon.jpg">
+    <script defer src="beancraft.js"></script>
+</head>
+<body>
+    <div class="submitpage">
+        <header>
+        <nav class="navbar">
+            <a href="home.html" class="logo"> BeanCraft </a>
+            <ul class="links"> 
+                <li> <a href="about.html"> About Us </a> </li>
+                <li> <a href="selection.html"> Our Coffee </a> </li>
+                <li> <a href="contact.html"> Contact </a> </li>
+            </ul>
+            <div class="icon_wrapper">
+                <img id="icon"  src="images/moon.png">
+            </div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-filter"></i>
+            </div>
+        </nav>
+        <div class="dropdown_menu">
+            <li> <a href="about.html"> About Us </a> </li>
+            <li> <a href="selection.html"> Our Coffee </a> </li>
+            <li> <a href="contact.html"> Contact </a> </li>
+        </div>
+    </header>
+    <main> 
+        <div class="submit_container"> <!-- Thank you message and back to home link -->
+        <h1 id="Thank_you"> Thank you for your inquiry! </h1>
+        <p id="in_touch"> We will get back to you shortly. </p>
+        <br>
+        <div class="backcontainer">
+        <a href="home.html" id="backtohome"> Return to Home Page </a>
+        </div>
+        </div>
+    </main>
+    </div>
+</body>
+</html>
